@@ -19,34 +19,32 @@ A Spring Boot application for managing voucher codes and special offers. This ap
 ## Setup Instructions
 
 1. **Clone the Repository**
-   ```bash
+   bash:
    git clone <repository-url>
    cd voucherpool
-   ```
 
 2. **Database Setup**
-   - Create a MySQL database named 'voucherpool':
-   ```sql
+   - Create a MySQL database named 'voucherpool':git
+   sql:
    CREATE DATABASE voucherpool;
-   ```
    - Update database configuration in `src/main/resources/application.yaml` if needed:
-   ```yaml
+   yaml:
    spring:
      datasource:
        url: jdbc:mysql://localhost:3306/voucherpool
        username: root
        password: password
-   ```
+   
 
 3. **Build the Application**
-   ```bash
+   bash:
    ./mvnw clean install
-   ```
+   
 
 4. **Run the Application**
-   ```bash
+   bash:
    ./mvnw spring-boot:run
-   ```
+   
 
 ## API Documentation
 
@@ -61,13 +59,13 @@ The OpenAPI specification is available at:
 1. **Generate Vouchers**
    - Endpoint: `POST /api/vouchers/generate`
    - Creates voucher codes for specified recipients and special offer
-   ```json
+   json:
    {
      "specialOfferId": 1,
      "expirationDate": "2025-12-31T23:59:59",
      "recipientEmails": ["user@example.com"]
    }
-   ```
+   
 
 2. **Get Valid Vouchers**
    - Endpoint: `GET /api/vouchers/valid/{email}`
@@ -76,12 +74,11 @@ The OpenAPI specification is available at:
 3. **Validate Voucher**
    - Endpoint: `POST /api/vouchers/validate`
    - Validates a voucher code for a specific recipient
-   ```json
+   json:
    {
      "code": "SUMMER2025",
      "email": "user@example.com"
    }
-   ```
 
 ## Sample Data
 
