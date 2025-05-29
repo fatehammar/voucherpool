@@ -49,10 +49,10 @@ A Spring Boot application for managing voucher codes and special offers. This ap
 ## API Documentation
 
 Once the application is running, you can access the Swagger UI at:
-- http://localhost:8080/swagger-ui/index.html
+- http://localhost:8085/swagger-ui/index.html
 
 The OpenAPI specification is available at:
-- http://localhost:8080/v3/api-docs
+- http://localhost:8085/v3/api-docs
 
 ## Available Endpoints
 
